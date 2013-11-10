@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_PandyD = new System.Windows.Forms.Label();
             this.prgbar_food = new System.Windows.Forms.ProgressBar();
             this.prgbar_rest = new System.Windows.Forms.ProgressBar();
             this.prgbar_social = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_social = new System.Windows.Forms.Label();
             this.lbl_rest = new System.Windows.Forms.Label();
             this.lbl_food = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerSocial = new System.Windows.Forms.Timer(this.components);
+            this.timerRest = new System.Windows.Forms.Timer(this.components);
+            this.timerFood = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,16 +82,6 @@
             this.prgbar_social.TabIndex = 4;
             this.prgbar_social.Value = 100;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.pandy;
-            this.pictureBox1.Location = new System.Drawing.Point(239, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 184);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // lbl_social
             // 
             this.lbl_social.AutoSize = true;
@@ -117,6 +111,24 @@
             this.lbl_food.Size = new System.Drawing.Size(61, 25);
             this.lbl_food.TabIndex = 8;
             this.lbl_food.Text = "Food";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.pandy;
+            this.pictureBox1.Location = new System.Drawing.Point(239, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(232, 184);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timerSocial
+            // 
+            this.timerSocial.Enabled = true;
+            // 
+            // timerFood
+            // 
+            this.timerFood.Tick += new System.EventHandler(this.timerFood_Tick);
             // 
             // PandyApp
             // 
@@ -152,6 +164,9 @@
         private System.Windows.Forms.Label lbl_social;
         private System.Windows.Forms.Label lbl_rest;
         private System.Windows.Forms.Label lbl_food;
+        private System.Windows.Forms.Timer timerSocial;
+        private System.Windows.Forms.Timer timerRest;
+        private System.Windows.Forms.Timer timerFood;
     }
 }
 

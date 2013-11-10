@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Phidget21.NET, Version=2.1.8.176, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Phidgets\Phidget21.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PandyVisDesg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PandyVisDesg.Designer.cs">
+      <DependentUpon>PandyVisDesg.cs</DependentUpon>
+    </Compile>
     <Compile Include="PandyApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,23 +64,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PandyVisDesg.resx">
+      <DependentUpon>PandyVisDesg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PandyApp.resx">
       <DependentUpon>PandyApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -79,6 +92,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pandy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PandyVisDesg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleanpandy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vibrationmotor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vibrationmotoron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rfid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rfidon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pressuresensorblack - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pressuresensoronblack - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speakeron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargerporton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargerport.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pressuresensor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pressuresensoron.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
